@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Оптика</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <h1 class="visually-hidden">Карточка</h1>
+
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main main--mt">
+        <div class="breadcrumbs">
+          <div class="container">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Очки</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Очки для водителей</a>
+              </li>
+
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--active"
+                  >Антифары MYSTERY 0097 C01</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        @include('./components/_product.html')
+        @include('./components/_similar-products.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>

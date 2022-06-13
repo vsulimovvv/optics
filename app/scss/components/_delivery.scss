@@ -1,0 +1,65 @@
+.delivery {
+  // @include adaptive-value('padding-top', 40, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__title {
+    @include fz40();
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #65666a;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  .delivery-item {
+    @include adaptive-value('padding', 30, 15, 1);
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #fbfbfb;
+    
+    &__top {
+      position: relative;
+      padding-left: 70px;
+      min-height: 48px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 27px;
+
+      &::after {
+        @include elDef();
+        width: 48px;
+        height: 48px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @include backgroundImage(url('../images/content/shop.png'), contain);
+      }
+    }
+
+    &__title {
+      font-size: 23px;
+      line-height: 1;
+      font-weight: 600;
+      color: #191919;
+      @include adaptive-value('font-size', 23, 18, 1);
+    }
+
+    &__text {
+      font-size: 17px;
+      color: #393939;
+      @include adaptive-value('font-size', 17, 15, 1);
+    }
+  }
+}

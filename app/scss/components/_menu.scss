@@ -1,0 +1,144 @@
+.menu {
+  max-width: 750px;
+  width: 100%;
+
+  @include breakpointsMaxW($bp-container) {
+    max-width: 680px;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 400;
+    transition: 200ms ease;
+    position: relative;
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &--dropdown {
+      padding-right: 15px;
+      position: relative;
+      border-radius: 5px;
+
+      &::after {
+        @include elDef();
+        width: 7px;
+        height: 7px;
+        right: 0;
+        top: 45%;
+        transform: translateY(-50%);
+        @include maskImage(url('../images/icons/chevron.svg'), 100%);
+        background-color: var(--color-white);
+      }
+
+      &:hover {
+        &::before {
+          transform: scale(0);
+        }
+
+        &::after {
+          background-color: var(--color-accent);
+        }
+
+        & + .dropmenu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .dropmenu {
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 55px;
+    background-color: var(--color-white);
+    box-shadow: 0px 19px 51px 0px rgba(53, 56, 62, 0.23);
+    border-radius: 5px;
+    padding: 0 21px;
+    transition: 450ms ease;
+    transition-delay: 150ms;
+
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &__item {
+      border-bottom: 1px solid #ebebeb;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      color: var(--color-dark);
+      padding: 12px 0;
+      transition: 150ms ease;
+      position: relative;
+      padding-right: 20px;
+
+      &:hover {
+        & + .submenu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+
+      &::after {
+        @include elDef();
+        width: 10px;
+        height: 10px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        @include maskImage(url('../images/sprite.svg#chevron'), 100%);
+        background-color: #d0d0d0;
+        transition: 150ms ease;
+      }
+
+      &:hover {
+        color: var(--color-accent);
+
+        &::after {
+          background-color: var(--color-accent);
+          transform: translateY(-50%) translateX(3px) rotate(-90deg);
+        }
+      }
+    }
+  }
+}

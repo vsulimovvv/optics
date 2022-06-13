@@ -1,0 +1,56 @@
+.hero {
+  @include background(cover);
+  height: 100%;
+  color: var(--color-white);
+  padding: 50px;
+  border-radius: 10px;
+
+  @include breakpointsMaxW($bp-991) {
+    border-radius: 0;
+    padding-left: 15px;
+  }
+
+  &__title {
+    @include fz35();
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__offer {
+    max-width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 45px;
+
+    &::after {
+      @include elDef();
+      @include maskImage(url('../images/icons/dots.svg'), contain);
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 3px;
+      width: 17px;
+      background-color: var(--color-white);
+    }
+
+    &:hover {
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

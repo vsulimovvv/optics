@@ -1,0 +1,91 @@
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #383b41;
+  color: var(--color-white);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 200px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 100px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    padding-left: 60px;
+    position: relative;
+
+    &::before {
+      @include elDef();
+      right: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 110px;
+      background-color: #505358;
+
+      @include breakpointsMaxW($bp-container) {
+        right: -50px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 35px;
+      height: 35px;
+      left: 0;
+      top: 0;
+    }
+
+    &--free {
+      &::after {
+        @include backgroundImage(url('../images/content/message.png'), contain);
+      }
+    }
+
+    &--help {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/sun-glass.png'),
+          contain
+        );
+      }
+    }
+  }
+
+  &__heading {
+    @include adaptive-value('font-size', 23, 18, 1);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 1.5;
+    font-weight: 400;
+    color: #bcbcbc;
+  }
+}

@@ -1,0 +1,48 @@
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  box-shadow: 0px 11px 13px 0px rgba(0, 0, 0, 0.05);
+  transition: 200ms ease;
+  @include adaptive-value('width', 35, 28, 1);
+  @include adaptive-value('height', 35, 28, 1);
+
+  &::after {
+    @include elDef();
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include maskImage(url('../images/icons/chevron.svg'), contain);
+    background-color: #777777;
+    @include adaptive-value('width', 13, 10, 1);
+    @include adaptive-value('height', 13, 10, 1);
+    transition: 200ms ease;
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+
+    &::after {
+      background-color: var(--color-white);
+    }
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+.swiper-button-next {
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: var(--color-accent);
+}

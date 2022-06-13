@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Оптика</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <h1 class="visually-hidden">Контакты</h1>
+
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main main--mt">
+        <div class="grid">
+          <div class="container">
+            <div class="grid__wrapper grid__wrapper--gap-40">
+              <div class="grid__side side side--border">
+                <a class="side__catalog-btn" href="#">Каталог ТОВАРОВ</a>
+
+                <div class="side__inner side__inner--border">
+                  <div class="side__top">
+                    <p class="side__name">ИНФОРМАЦИЯ</p>
+                  </div>
+
+                  <ul class="side__list">
+                    <li class="side__item">
+                      <a class="side__link" href="#"> Доставка </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link side__link--active" href="#">
+                        Оплата
+                      </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#"> Контакты </a>
+                    </li>
+                    <li class="side__item">
+                      <a class="side__link" href="#"> О компании </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid__content">
+                <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                      <a class="breadcrumbs__link breadcrumbs__link--active"
+                        >Контакты</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                @include('./components/_contacts.html')
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

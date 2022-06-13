@@ -1,0 +1,69 @@
+.descr {
+  @include adaptive-value('padding-top', 80, 50, 1);
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__title {
+    @include fz40();
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__middle {
+    padding: 20px 0 30px;
+
+    @include breakpointsMaxW($bp-container) {
+      max-width: 500px;
+      max-width: calc(400px + (500 - 400) * ((100vw - 991px) / (1300 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__text {
+    @include adaptive-value('font-size', 18, 15, 1);
+    color: #5d5d5d;
+
+    p {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 20, 10, 1);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-left: max(15px, calc((100% - 1270px) / 2));
+    display: grid;
+    grid-template-columns: minmax(auto, 460px) minmax(auto, 600px) 1fr;
+    gap: 50px;
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: minmax(auto, 400px) auto 1fr;
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      padding-right: 15px;
+    }
+  }
+
+  &__preview {
+    @include background(cover);
+    width: 100%;
+    height: 100%;
+
+    &--second {
+      @include breakpointsMaxW($bp-991) {
+        display: none;
+      }
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      height: 500px;
+      order: 1;
+      height: calc(250px + (450 - 250) * ((100vw - 360px) / (991 - 360)));
+    }
+  }
+}

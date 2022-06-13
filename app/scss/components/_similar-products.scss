@@ -1,0 +1,67 @@
+.similar-products {
+  padding-top: 30px;
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    border-bottom: 1px solid #ededed;
+  }
+
+  &__title {
+    @include fz30();
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 30px;
+
+    @include breakpointsMaxW($bp-768) {
+      padding-bottom: 20px;
+    }
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-accent);
+      bottom: -1px;
+      left: 0;
+    }
+  }
+
+  &__slider {
+    padding-bottom: 60px;
+    position: relative;
+
+    .swiper-pagination {
+      top: initial;
+      bottom: 18px !important;
+      max-width: calc(100% - 130px);
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      bottom: -18px;
+      top: initial;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #b1b1b1;
+    }
+
+    .swiper-button-prev {
+    }
+  }
+
+  .swiper-slide {
+    box-sizing: border-box;
+    @include adaptive-value('max-width', 235, 220, 1);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

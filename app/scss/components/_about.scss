@@ -1,0 +1,78 @@
+.about {
+  overflow-x: hidden;
+  // @include adaptive-value('padding-top', 40, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__title {
+    @include fz35();
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__preview {
+    @include adaptive-value('height', 350, 120, 1);
+    @include adaptive-value('border-radius', 10, 5, 1);
+    @include background(cover);
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    border-radius: 10px;
+  }
+
+  &__text {
+    max-width: 905px;
+    width: 100%;
+    color: #444444;
+    @include adaptive-value('font-size', 18, 15, 1);
+
+    p {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 20, 10, 1);
+      }
+    }
+  }
+
+  &__notify {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #838484;
+    max-width: 400px;
+    margin: 0 auto;
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 40px;
+    @include backgroundImage(url('../images/content/message.png'), contain);
+    background-size: 25px;
+    background-position: left top;
+
+    &::after,
+    &::before {
+      @include elDef();
+      height: 1px;
+      width: 60%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #e1e3e4;
+
+      @include breakpointsMaxW($bp-768) {
+        display: none;
+      }
+    }
+
+    &::after {
+      right: -70%;
+    }
+
+    &::before {
+      left: -70%;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #36393c;
+  }
+}

@@ -1,0 +1,67 @@
+.payment {
+  @include adaptive-value('padding-top', 40, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 50, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__title {
+    @include fz40();
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 17px;
+    color: #65666a;
+  }
+
+  .payment-item {
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    position: relative;
+    padding-left: 85px;
+    background-color: #fbfbfb;
+    max-width: 645px;
+    display: grid;
+    grid-template-columns: minmax(auto, 175px) minmax(auto, 325px);
+    align-items: center;
+    gap: 30px;
+    color: #393939;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      gap: 5px;
+      padding: 20px 10px;
+      padding-left: 85px;
+    }
+
+    &__title {
+      font-size: 19px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #191919;
+
+      @include breakpointsMaxW($bp-768) {
+        font-size: 18px;
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 48px;
+      height: 48px;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      @include backgroundImage(url('../images/content/cash.png'), contain);
+
+      @include breakpointsMaxW($bp-768) {
+        top: 20px;
+        transform: translateY(0);
+      }
+    }
+  }
+}

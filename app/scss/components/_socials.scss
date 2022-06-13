@@ -1,0 +1,84 @@
+.socials {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+
+  &__name {
+    font-size: 19px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: 200ms ease;
+    position: relative;
+
+    &:hover {
+      background-color: var(--color-accent);
+    }
+
+    &::after {
+      @include elDef();
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-white);
+      transition: 200ms ease;
+    }
+
+    &--vk {
+      &::after {
+        @include maskImage(url('../images/icons/vk.svg'), contain);
+      }
+    }
+
+    &--mailru {
+      &::after {
+        @include maskImage(url('../images/icons/mailru.svg'), contain);
+      }
+    }
+
+    &--instagram {
+      &::after {
+        @include maskImage(url('../images/icons/instagram.svg'), contain);
+      }
+    }
+
+    &--whatsapp {
+      &::after {
+        @include maskImage(url('../images/icons/whatsapp.svg'), contain);
+      }
+    }
+  }
+
+  &--accent {
+    .socials {
+      &__link {
+        background-color: var(--color-accent);
+
+        &:hover {
+          background-color: var(--color-dark);
+        }
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+}
