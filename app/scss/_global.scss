@@ -83,6 +83,11 @@ body {
   height: 35px;
   display: block;
 
+  @include breakpointsMaxW($bp-991) {
+    width: 150px;
+    height: 40px;
+  }
+
   img {
     @include img(contain);
   }
@@ -330,10 +335,11 @@ body {
     line-height: 1;
     color: #2f3133;
     padding: 10px 0;
+    font-weight: 400;
 
-    &--fw-700 {
-      font-weight: 700;
-    }
+    // &--fw-700 {
+    //   font-weight: 700;
+    // }
 
     &--frames {
       &::before {

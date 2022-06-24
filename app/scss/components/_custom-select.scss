@@ -59,7 +59,7 @@
   &__list {
     padding: 0;
     background-color: inherit;
-    max-height: 130px;
+    max-height: 200px;
     overflow-y: auto;
 
     .choices__item {
@@ -70,7 +70,7 @@
       z-index: 100;
 
       .choices__list {
-        max-height: 130px !important;
+        max-height: 250px !important;
       }
 
       .choices__item {
