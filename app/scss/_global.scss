@@ -1197,3 +1197,9 @@ input[type='file'] {
     background-color: var(--color-white);
   }
 }
+
+.side__content {
+  .side__list {
+    padding: 0;
+  }
+}
