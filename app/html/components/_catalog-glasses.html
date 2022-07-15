@@ -1,17 +1,52 @@
 <section class="catalog">
   <div class="container container--px-0">
     <div class="catalog__top">
-      <h2 class="catalog__title">Очки для водителей</h2>
+      <h2 class="catalog__title">Оправы</h2>
 
       <div class="catalog__top-left">
         <div class="catalog__sort catalog-sort">
           <span class="catalog-sort__name">Сортировать:</span>
+          <ul class="catalog-sort__list">
+            <li class="catalog-sort__item">
+              <button
+                class="catalog-sort__btn catalog-sort__btn--icon catalog-sort__btn--active"
+                type="button"
+              >
+                Цена
+              </button>
+            </li>
+            <li class="catalog-sort__item">
+              <button
+                class="catalog-sort__btn catalog-sort__btn--icon"
+                type="button"
+              >
+                Артикул
+              </button>
+            </li>
+            <li class="catalog-sort__item">
+              <button class="catalog-sort__btn" type="button">В наличии</button>
+            </li>
+            <li class="catalog-sort__item">
+              <button class="catalog-sort__btn" type="button">
+                Временно нет в наличии
+              </button>
+            </li>
+            <li class="catalog-sort__item">
+              <button
+                class="catalog-sort__btn catalog-sort__btn--icon"
+                type="button"
+              >
+                Дата добавления
+              </button>
+            </li>
+          </ul>
+
           <select class="catalog-sort__select select">
-            <option value="">Название</option>
-            <option value="1">Цена</option>
-            <option value="1">Оценка покупателей</option>
-            <option value="1">Дата добавления</option>
-            <option value="1">В наличии</option>
+            <option value="">Цена</option>
+            <option value="1">Артикул</option>
+            <option value="2">В наличии</option>
+            <option value="3">Временно нет в наличии</option>
+            <option value="4">Дата добавления</option>
           </select>
         </div>
 

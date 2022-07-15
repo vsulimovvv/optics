@@ -16,84 +16,9 @@
       @include('./components/_header.html')
 
       <main class="main main--mt">
-        <div class="grid">
-          <div class="container container--p-0">
-            <div class="grid__wrapper">
-              <div class="grid__side side side--no-accordion">
-                <div class="side__inner">
-                  <div class="side__top">
-                    <a class="side__catalog-btn" href="#">Каталог ТОВАРОВ</a>
-                  </div>
-                  <ul class="side__list">
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--frames"
-                        href="#"
-                      >
-                        Оправы
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--glasses"
-                        href="#"
-                      >
-                        Очки
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--sports"
-                        href="#"
-                      >
-                        Спортивные
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--lenses"
-                        href="#"
-                      >
-                        Линзы
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--finished"
-                        href="#"
-                      >
-                        Готовые очки
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--accessories"
-                        href="#"
-                      >
-                        Аксессуары
-                      </a>
-                    </li>
-                    <li class="side__item">
-                      <a
-                        class="side__link side__link--pl-50 side__link--stock"
-                        href="#"
-                      >
-                        Акции
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="grid__content">
-                @include('./components/_hero.html')
-              </div>
-            </div>
-          </div>
-        </div>
-        @include('./components/_best-offers.html')
+        @include('./components/_promo.html')
         @include('./components/_advantages.html')
         @include('./components/_descr.html')
-        @include('./components/_catalog-section.html')
       </main>
       @include('./components/_footer.html')
     </div>
@@ -101,30 +26,3 @@
     @include('./components/base/_scripts.html')
   </body>
 </html>
-
-<!-- <label class="checkbox">
-  <input class="checkbox__input" type="checkbox" required />
-  <span class="checkbox__box"></span>
-  <span class="checkbox__text">
-    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
-  </span> 
-</label> -->
-
-<!-- <div class="breadcrumbs">
-        <div class="container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#"> Женщинам </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Пальто женское</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->

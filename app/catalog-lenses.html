@@ -971,10 +971,28 @@
       <div class="catalog__top-left">
         <div class="catalog__sort catalog-sort">
           <span class="catalog-sort__name">Сортировать:</span>
+          <ul class="catalog-sort__list">
+            <li class="catalog-sort__item">
+              <button
+                class="catalog-sort__btn catalog-sort__btn--icon catalog-sort__btn--active"
+                type="button"
+              >
+                Цена
+              </button>
+            </li>
+            <li class="catalog-sort__item">
+              <button
+                class="catalog-sort__btn catalog-sort__btn--icon"
+                type="button"
+              >
+                Коэффициент преломления
+              </button>
+            </li>
+          </ul>
+
           <select class="catalog-sort__select select">
-            <option value="">По возрастанию цены</option>
-            <option value="1">По убыванию цены</option>
-            <option value="2">По коэффициенту приломеления</option>
+            <option value="">Цена</option>
+            <option value="1">Коэффициент преломления</option>
           </select>
         </div>
 

@@ -18,22 +18,27 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    gap: 50px;
+    gap: 20px;
 
     @include breakpointsMaxW($bp-container) {
-      gap: 30px;
+      gap: 15px;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &-left {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
       width: 100%;
       justify-content: space-between;
 
+      @include breakpointsMaxW($bp-container) {
+        gap: 10px;
+      }
+
       @include breakpointsMaxW($bp-991) {
-        justify-content: flex-start;
-        gap: 30px;
+        gap: 20px;
       }
 
       @include breakpointsMaxW($bp-768) {
@@ -54,14 +59,19 @@
     gap: 15px;
 
     @include breakpointsMaxW($bp-container) {
-      gap: 10px;
+      gap: 8px;
     }
   }
 
   &__btn {
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     transition: 200ms ease;
+
+    @include breakpointsMaxW($bp-container) {
+      width: 15px;
+      height: 15px;
+    }
 
     &:hover {
       background-color: var(--color-accent);
@@ -84,7 +94,7 @@
   }
 
   &__title {
-    @include fz35();
+    @include fz30();
     font-weight: 500;
     flex-shrink: 0;
 
@@ -130,29 +140,90 @@
     gap: 14px;
 
     @include breakpointsMaxW($bp-container) {
-      gap: 7px;
+      gap: 10px;
     }
 
     &__name {
       font-size: 15px;
       line-height: 1;
       font-weight: 400;
-      color: #383b41;
+      color: var(--color-dark);
       flex-shrink: 0;
+
+      @include breakpointsMaxW($bp-container) {
+        font-size: 12px;
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        font-size: 14px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      @include breakpointsMaxW($bp-container) {
+        gap: 5px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        display: none;
+      }
     }
 
     .choices {
-      width: 215px;
-      background-color: #ffffff;
-      border-radius: 5px;
-
-      @include breakpointsMaxW($bp-container) {
-        width: 105px;
-      }
+      display: none;
 
       &::after {
         top: 12px !important;
-        @include maskImage(url('../images/icons/triangle.svg'), contain);
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        display: block;
+        width: 200px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        width: 170px;
+      }
+    }
+
+    &__btn {
+      font-size: 14px;
+      line-height: 1;
+      color: #878889;
+      transition: 200ms ease;
+
+      @include breakpointsMaxW($bp-container) {
+        font-size: 13px;
+      }
+
+      &--icon {
+        padding-right: 20px;
+        position: relative;
+
+        &::after {
+          @include elDef();
+          width: 15px;
+          height: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          @include maskImage(url('../images/content/arrows.png'), contain);
+          background-color: #878889;
+          transition: 200ms ease;
+        }
+      }
+
+      &:hover,
+      &--active {
+        color: #383b41;
+
+        &::after {
+          background-color: #383b41;
+        }
       }
     }
   }
@@ -160,7 +231,11 @@
   .catalog-show {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 5px;
+    }
 
     &__name {
       flex-shrink: 0;
@@ -173,6 +248,10 @@
       border: none;
       width: 40px;
       flex-shrink: 0;
+
+      @include breakpointsMaxW($bp-container) {
+        width: 34px;
+      }
 
       &__inner {
         padding: 0;

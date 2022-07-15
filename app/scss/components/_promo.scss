@@ -1,0 +1,28 @@
+.promo {
+  color: var(--color-white);
+  @include background(cover);
+  @include adaptive-value('padding-top', 190, 80, 1);
+  @include adaptive-value('padding-bottom', 240, 140, 1);
+
+  &__wrapper {
+    max-width: 650px;
+  }
+
+  &__title {
+    @include adaptive-value('font-size', 50, 28, 1);
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 25px;
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+  }
+
+  &__text {
+    @include adaptive-value('font-size', 18, 16, 1);
+    line-height: 1.5;
+    width: 90%;
+
+    @include breakpointsMaxW($bp-768) {
+      width: 100%;
+    }
+  }
+}
