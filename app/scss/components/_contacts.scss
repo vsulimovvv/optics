@@ -13,6 +13,14 @@
     }
   }
 
+  &__city {
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 500;
+    color: #4f4f4f;
+    margin-bottom: 10px;
+  }
+
   &__top {
     display: grid;
     grid-template-columns: 240px repeat(2, auto);
@@ -76,8 +84,7 @@
       @include elDef();
       width: 13px;
       height: 13px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 3px;
       left: 0;
       background-color: var(--color-accent);
       @include maskImage(url('../images/icons/clock.svg'), contain);

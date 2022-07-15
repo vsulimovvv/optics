@@ -106,6 +106,16 @@
   &__bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+
+      .catalog__pagination {
+        grid-row: 2/3;
+        justify-self: center;
+      }
+    }
   }
 
   &__btn-more {
