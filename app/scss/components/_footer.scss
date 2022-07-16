@@ -5,6 +5,10 @@
   background-color: #222222;
   color: var(--color-white);
 
+  @include breakpointsMaxW($bp-991) {
+    padding-bottom: 70px;
+  }
+
   &__top {
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

@@ -1203,3 +1203,24 @@ input[type='file'] {
     padding: 0;
   }
 }
+
+.fix-nav {
+  display: none;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 12px 0;
+
+  @include breakpointsMaxW($bp-991) {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .header-tools__list {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link
+  rel="shortcut icon"
+  href="images/content/header/logo-mobile.png"
+  type="image/x-icon"
+/>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Оптика</title>
+  </head>
+
+  <body>
+    <div class="popup popup--service">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="service-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="service-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--product">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказ насоса ДГН СЕРИЯ</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="product-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="product-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--consultation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказать консультацию</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="consultation-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="consultation-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <h1 class="visually-hidden">Главная</h1>
+
+    <div class="site-wrapper">
+      <header class="header">
+  <!-- Mobile Menu -->
+
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Каталог продукции
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Диваны</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Кресла</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Столы и стулья</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Мебель для сада</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Кровати</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Модульные гостиные</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Стенки</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Шкафы</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Кухни</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Тумбы и комоды</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Мебель для ванной</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Прихожие</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Акции</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Новинки</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Мягкая мебель
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"> Мягкая мебель</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"> Мягкая мебель</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Столы
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Столы</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Столы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Стулья
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Стулья</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Стулья</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Стулья</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Стулья</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Мебель для сада
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Мебель для сада</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Мебель для сада</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Мебель для сада</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Посуда
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Посуда</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Посуда</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Для детской
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Для детской</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Для детской</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- <div class="fix-nav">
+     <div class="container">
+       <div class="fix-nav__wrapper">
+         <ul class="fix-nav__list">
+           <li class="fix-nav__item">
+             <a class="fix-nav__link" href="#">
+               <div class="fix-nav__icon">
+                 <svg width="17" height="17">
+                   <use xlink:href="images/sprite.svg#grid"></use>
+                 </svg>
+               </div>
+               <span class="fix-nav__name">Каталог</span>
+             </a>
+           </li>
+           <li class="fix-nav__item">
+             <a class="fix-nav__link" href="#">
+               <div class="fix-nav__icon">
+                 <svg width="17" height="17">
+                   <use xlink:href="images/sprite.svg#search"></use>
+                 </svg>
+               </div>
+               <span class="fix-nav__name">Поиск</span>
+             </a>
+           </li>
+           <li class="fix-nav__item">
+             <a class="fix-nav__link" href="#">
+               <div class="fix-nav__icon">
+                 <svg width="17" height="17">
+                   <use xlink:href="images/sprite.svg#heart"></use>
+                 </svg>
+               </div>
+               <span class="fix-nav__name">Избранные</span>
+             </a>
+           </li>
+           <li class="fix-nav__item">
+             <a class="fix-nav__link" href="#">
+               <div class="fix-nav__icon">
+                 <svg width="17" height="17">
+                   <use xlink:href="images/sprite.svg#cart"></use>
+                 </svg>
+               </div>
+               <span class="fix-nav__name">Корзина</span>
+             </a>
+           </li>
+           <li class="fix-nav__item">
+             <a class="fix-nav__link" href="#">
+               <div class="fix-nav__icon">
+                 <svg width="17" height="17">
+                   <use xlink:href="images/sprite.svg#user"></use>
+                 </svg>
+               </div>
+               <span class="fix-nav__name">Аккаунт</span>
+             </a>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </div> -->
+  </div>
+
+  <!-- Mobile Menu -->
+
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <div class="top-menu">
+          <ul class="top-menu__list">
+            <li class="top-menu__item">
+              <a class="top-menu__link" href="#">Доставка</a>
+            </li>
+            <li class="top-menu__item">
+              <a class="top-menu__link" href="#">Оплата</a>
+            </li>
+            <li class="top-menu__item">
+              <a class="top-menu__link" href="#">О компании</a>
+            </li>
+            <li class="top-menu__item">
+              <a class="top-menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__contacts">
+          <address class="header__address">
+            проезд Серебрякова, д. 2,корп. 1
+          </address>
+          <a class="header__mail" href="mailto:alliance-optic@mail.ru">
+            alliance-optic@mail.ru
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle-inner">
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+
+        <a class="header__logo logo" href="#">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+
+        <form class="header__search form-search">
+          <div class="form-search__group">
+            <input
+              class="form-search__input"
+              placeholder="Поиск по сайту"
+              required
+            />
+
+            <select class="form-search__select select">
+              <option value="">Искать в категории</option>
+              <option value="1">В новостях</option>
+              <option value="3">В статьях</option>
+              <option value="2">В обзорах</option>
+              <option value="4">В акциях</option>
+            </select>
+
+            <button
+              class="form-search__btn"
+              type="submit"
+              aria-label="Поиск"
+            ></button>
+          </div>
+        </form>
+
+        <a class="header__phone" href="tel:+79268128611">8 (926) 812-86-11</a>
+
+        <div class="header__tools header-tools">
+          <ul class="header-tools__list">
+            <li class="header-tools__item">
+              <a class="header-tools__link header-tools__link--user" href="#">
+              </a>
+            </li>
+            <li class="header-tools__item">
+              <a class="header-tools__link header-tools__link--heart" href="#">
+                <span class="header-tools__link-count">0</span>
+              </a>
+            </li>
+            <li class="header-tools__item">
+              <a class="header-tools__link header-tools__link--filter" href="#">
+                <span class="header-tools__link-count">0</span>
+              </a>
+            </li>
+            <li class="header-tools__item">
+              <a class="header-tools__link header-tools__link--cart" href="#">
+                <span class="header-tools__link-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">Оправы</a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Оправы</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Оправы</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">Очки</a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Очки</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Очки</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">Спортивные</a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Спортивные</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Спортивные</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Линзии</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">
+                Готовые очки
+              </a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Готовые очки</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Готовые очки</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">
+                Аксессуары
+              </a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Аксессуары</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Аксессуары</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Акции</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__btn btn" type="button">
+          Запросить прайс-лист
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main"></main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__left">
+        <div class="footer__col footer__col--first">
+          <a class="footer__logo logo" href="#">
+            <img src="images/logo-white.png" alt="Логотип" />
+          </a>
+
+          <div class="footer__socials socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--mailru" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--whatsapp" href="#"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__copy">
+            2022 © Alliance Optic - оптовый мир качественной оптики, с доставкой
+            по всей России.
+          </div>
+
+          <div class="footer__call-box">
+            <a class="footer__phone" href="tel:+7 (495)789-10-12">
+              +7 (495)789-10-12
+            </a>
+            <button class="footer__btn btn btn-call" type="button">
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <span class="footer__name">Информация</span>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Доставка</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Оплата</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">О компании</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--remove-on-mobile">
+            <span class="footer__name">Каталог</span>
+            <ul class="footer__list footer__list--double">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Оправы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Готовые очки</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Очки</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Аксессуары</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Спортивные</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Акции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Линзы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__contacts">
+          <span class="footer__name">Каталог</span>
+
+          <div class="footer__contacts-inner">
+            <a class="footer__phone" href="#">8 (926) 812-86-11</a>
+            <a class="footer__mail" href="#">alliance-optic@mail.ru</a>
+            <address class="footer__address">
+              проезд Серебрякова, д. 2,корп. 1
+              <a href="#">найти на карте</a>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer__schedule">
+          <span class="footer__name">Каталог</span>
+
+          <div class="footer__time">
+            Пн-Суб: 9:00-18:00, Вс 9:00-13:00 Колл-центр: Будни, 9:00-18:00
+          </div>
+          <div class="footer__socials socials">
+            <span class="socials__name">Мы в социальных сетях:</span>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--mailru" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--whatsapp" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__bottom-left">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Пользовательское соглашение</a>
+      </div>
+      <a class="footer__up" href="#"></a>
+    </div>
+
+    <div class="footer__copy-mobile">
+      2022 © Alliance Optic - оптовый мир качественной оптики, с доставкой по
+      всей России.
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

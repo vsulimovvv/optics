@@ -1,0 +1,91 @@
+<section class="registration">
+  <div class="container">
+    <h2 class="registration__title">Регистрация клиента ИП</h2>
+
+    <form class="registration__form form-submit">
+      <div class="form-submit__inputs">
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="text"
+            placeholder="Введите ФИО"
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="email"
+            placeholder="Ваш e-mail"
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="tel"
+            placeholder="Контактный телефон"
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="password"
+            placeholder="Пароль"
+          />
+        </label>
+      </div>
+
+      <p class="form-submit__text">
+        Для оформления договора, пришлите пожалуйста следующие документы
+      </p>
+
+      <div class="form-submit__docs">
+        <div class="form__group">
+          <label class="custom-file-upload" for="file-upload">
+            Копия ИНН <span>прикрепить файл</span>
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+        <div class="form__group">
+          <label class="custom-file-upload" for="file-upload">
+            Копия ЕГРЮЛ
+
+            <span>прикрепить файл</span>
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+        <div class="form__group">
+          <label class="custom-file-upload" for="file-upload">
+            Паспорт (с фото) <span>прикрепить файл</span>
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+        <div class="form__group">
+          <label class="custom-file-upload" for="file-upload">
+            Паспорт (с пропиской) <span>прикрепить файл</span>
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+
+        <div class="form__group">
+          <label class="custom-file-upload" for="file-upload">
+            Карточка клиента
+            <span>прикрепить файл</span>
+          </label>
+          <input id="file-upload" type="file" />
+        </div>
+      </div>
+
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox" required />
+        <span class="checkbox__box"></span>
+        <span class="checkbox__text">
+          Соглашаюсь с <a href="#"> обработкой персональных данных</a>
+        </span>
+      </label>
+
+      <button class="form-submit__btn btn" type="submit">
+        ЗАРЕГИСТРИРОВАТЬСЯ
+      </button>
+    </form>
+  </div>
+</section>
