@@ -2,10 +2,11 @@
   color: var(--color-white);
   @include background(cover);
   @include adaptive-value('padding-top', 190, 80, 1);
-  @include adaptive-value('padding-bottom', 240, 140, 1);
+  @include adaptive-value('padding-bottom', 140, 90, 1);
 
   &__wrapper {
     max-width: 650px;
+    @include adaptive-value('margin-bottom', 100, 50, 1);
   }
 
   &__title {
@@ -23,6 +24,37 @@
 
     @include breakpointsMaxW($bp-768) {
       width: 100%;
+    }
+  }
+
+  &__brands {
+  }
+}
+
+.brands {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px 75px;
+    flex-wrap: wrap;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px 50px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      gap: 30px 50px;
+    }
+  }
+
+  &__item {
+    min-width: 90px;
+
+    @include adaptive-value('max-width', 170, 80, 1);
+    @include adaptive-value('height', 70, 40, 1);
+
+    img {
+      @include img(contain);
     }
   }
 }

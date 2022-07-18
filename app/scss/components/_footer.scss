@@ -128,6 +128,10 @@
     color: var(--color-white);
     transition: 200ms ease;
 
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+
     &:hover {
       color: var(--color-accent);
     }
@@ -234,18 +238,18 @@
       @include breakpointsMaxW($bp-576) {
         display: grid;
         grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
         justify-content: space-between;
-        gap: 30px 10px;
+        column-gap: 30px;
+        margin-bottom: 20px;
 
         .footer__call-box {
-          grid-column: 1/-1;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
+          display: none;
         }
+      }
+
+      @include breakpointsMaxW($bp-360) {
+        gap: 20px;
       }
     }
   }
@@ -384,6 +388,20 @@
       transform: translateY(-50%);
       @include maskImage(url('../images/icons/clock-big.svg'), contain);
       background-color: #393939;
+    }
+  }
+
+  .socials {
+    &__link {
+      @include breakpointsMaxW($bp-360) {
+        width: 30px;
+        height: 30px;
+
+        &::after {
+          width: 15px;
+          height: 15px;
+        }
+      }
     }
   }
 }
