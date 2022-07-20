@@ -128,10 +128,6 @@
     color: var(--color-white);
     transition: 200ms ease;
 
-    @include breakpointsMaxW($bp-768) {
-      display: none;
-    }
-
     &:hover {
       color: var(--color-accent);
     }

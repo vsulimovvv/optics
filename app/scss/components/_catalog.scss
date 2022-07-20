@@ -73,7 +73,8 @@
       height: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &--active {
       background-color: var(--color-accent);
     }
 
@@ -105,11 +106,35 @@
 
   &__list {
     display: grid;
-    gap: 10px;
+    gap: 10px;;
     @include adaptive-value('margin-bottom', 60, 30, 1);
 
     @include breakpointsMaxW($bp-768) {
       gap: 30px;
+    }
+
+    &--grid {
+      grid-template-columns: repeat(3, minmax(auto, 300px));
+      gap: 45px 25px;
+      justify-content: center;
+
+      .product-card{
+        max-width: 100%;
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        grid-template-columns: repeat(3, minmax(auto, 235px));
+        gap: 40px 20px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        grid-template-columns: repeat(2, minmax(auto, 235px));
+        gap: 40px 20px;
+      }
+
+      @include breakpointsMaxW($bp-576) {
+        gap: 30px 10px;
+      }
     }
   }
 

@@ -202,13 +202,31 @@ body {
 }
 
 .side {
-  @include breakpointsMaxW($bp-991) {
-    display: none;
-  }
-
   &__body {
     background-color: var(--color-white);
     padding: 20px 0;
+
+    .side__control {
+      padding-left: 0;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--color-white);
+      height: 100vh;
+      z-index: 10;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      transform: translateX(-100%);
+      transition: 400ms ease;
+      width: 80%;
+      overflow-y: auto;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
 
     .side-list {
       display: flex;
@@ -250,6 +268,10 @@ body {
     line-height: 1;
     font-weight: 400;
 
+    @include breakpointsMaxW($bp-576) {
+      padding: 15px 20px;
+    }
+
     &--reset {
       border: none;
       color: #aaaaaa;
@@ -267,6 +289,10 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
     background-color: var(--color-white);
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
 
     &--border {
       box-shadow: none;
@@ -691,6 +717,32 @@ input[type='file'] {
       transform: translateX(-12px);
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__stock {
+    display: none;
+  }
+
+  &__vendor-code {
+    display: none;
+  }
+
+  &--list {
+    .product-card__list {
+      display: block;
+    }
+
+    .product-card__stock {
+      display: block;
+    }
+
+    .product-card__vendor-code {
+      display: block;
     }
   }
 

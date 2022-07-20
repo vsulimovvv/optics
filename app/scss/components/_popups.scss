@@ -24,7 +24,9 @@
     overflow-y: auto;
     max-height: calc(100% - 40px);
     transition: 750ms ease;
-    @include adaptive-value('padding', 40, 15, 1);
+    padding: 40px;
+    @include adaptive-value('padding-right', 40, 15, 1);
+    @include adaptive-value('padding-left', 40, 15, 1);
 
     display: flex;
     flex-direction: column;
@@ -93,7 +95,10 @@
     }
   }
 
-  &--call {
-  
+  .form-submit {
+    &__btn {
+      min-height: auto;
+      height: 50px;
+    }
   }
 }
