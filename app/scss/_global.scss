@@ -328,6 +328,7 @@ body {
     color: #2f3133;
     padding: 10px 0;
     font-weight: 400;
+    padding-left: 50px;
 
     &--frames {
       &::before {
@@ -409,6 +410,7 @@ body {
     position: relative;
     padding-right: 15px;
     transition: 200ms ease;
+    padding-left: 51px;
 
     &--active {
       color: var(--color-accent);
