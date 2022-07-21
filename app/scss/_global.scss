@@ -411,6 +411,24 @@ body {
       }
     }
 
+    &--sport {
+      &::before {
+        @include maskImage(url('../images/content/sports.png'), contain);
+      }
+      padding-left: 50px;
+
+      &::before {
+        @include elDef();
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: #b0acac;
+        transition: 200ms ease;
+      }
+    }
+
     &--accessories {
       &::before {
         @include maskImage(url('../images/content/accessories.png'), contain);
