@@ -1,4 +1,37 @@
 window.addEventListener('DOMContentLoaded', () => {
+  (function loadForm() {
+    const input = document.querySelector('[name="copy-inn"]');
+    const text = document.querySelector('.custom-file-upload--copy-inn');
+
+    input.addEventListener('change', function () {
+      if (input.value) {
+        text.innerText = input.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+      } else {
+        text.innerText = 'Файл не выбран';
+      }
+    });
+    // let inputs = document.querySelectorAll('.input__file');
+
+    // Array.prototype.forEach.call(inputs, function (input) {
+    //   let label = input.previousElementSibling,
+    //     labelVal = label.querySelector('span').innerText;
+
+    //   input.addEventListener('change', function (e) {
+    //     let countFiles = '';
+    //     if (this.files && this.files.length >= 1) {
+    //       countFiles = this.files.length;
+    //     }
+
+    //     if (countFiles) {
+    //       label.querySelector('span').innerText =
+    //         'Выбрано файлов: ' + countFiles;
+    //     } else {
+    //       label.querySelector('span').innerText = labelVal;
+    //     }
+    //   });
+    // });
+  })();
+
   // * ===== Slider
   (function slider() {
     const sliderEl = document.querySelector('.catalog-section__slider');
