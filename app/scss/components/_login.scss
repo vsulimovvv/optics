@@ -73,7 +73,7 @@
   }
 
   &__link {
-    font-size: 24px;
+    @include adaptive-value('font-size', 24, 20, 1);
     line-height: 1;
     font-weight: 400;
     color: var(--color-accent);

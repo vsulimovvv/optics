@@ -1,37 +1,22 @@
 window.addEventListener('DOMContentLoaded', () => {
   (function loadForm() {
-    const input = document.querySelector('[name="copy-inn"]');
-    const text = document.querySelector('.custom-file-upload--copy-inn');
+    let inputs = document.querySelectorAll('.input-file-upload');
+    Array.prototype.forEach.call(inputs, function (input) {
+      let label = input.previousElementSibling,
+        labelVal = label.querySelector('.custom-file-upload span').innerText;
 
-    if (input) {
-      input.addEventListener('change', function () {
-        if (input.value) {
-          text.innerText = input.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
-        } else {
-          text.innerText = 'Файл не выбран';
-        }
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+
+        if (countFiles)
+          label.querySelector('.custom-file-upload span').innerText =
+            'Выбрано файлов: ' + countFiles;
+        else
+          label.querySelector('.custom-file-upload span').innerText = labelVal;
       });
-    }
-    // let inputs = document.querySelectorAll('.input__file');
-
-    // Array.prototype.forEach.call(inputs, function (input) {
-    //   let label = input.previousElementSibling,
-    //     labelVal = label.querySelector('span').innerText;
-
-    //   input.addEventListener('change', function (e) {
-    //     let countFiles = '';
-    //     if (this.files && this.files.length >= 1) {
-    //       countFiles = this.files.length;
-    //     }
-
-    //     if (countFiles) {
-    //       label.querySelector('span').innerText =
-    //         'Выбрано файлов: ' + countFiles;
-    //     } else {
-    //       label.querySelector('span').innerText = labelVal;
-    //     }
-    //   });
-    // });
+    });
   })();
 
   // * ===== Slider
@@ -358,8 +343,10 @@ window.addEventListener('DOMContentLoaded', () => {
     if (catalog) {
       btnGrid.addEventListener('click', (e) => {
         products.forEach((product) => {
-          product.classList.remove('product-card--list');
-          list.classList.add('catalog__list--grid');
+          if (product) {
+            product.classList.remove('product-card--list');
+            list.classList.add('catalog__list--grid');
+          }
         });
       });
 
