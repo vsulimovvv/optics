@@ -3,13 +3,15 @@ window.addEventListener('DOMContentLoaded', () => {
     const input = document.querySelector('[name="copy-inn"]');
     const text = document.querySelector('.custom-file-upload--copy-inn');
 
-    input.addEventListener('change', function () {
-      if (input.value) {
-        text.innerText = input.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
-      } else {
-        text.innerText = 'Файл не выбран';
-      }
-    });
+    if (input) {
+      input.addEventListener('change', function () {
+        if (input.value) {
+          text.innerText = input.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+        } else {
+          text.innerText = 'Файл не выбран';
+        }
+      });
+    }
     // let inputs = document.querySelectorAll('.input__file');
 
     // Array.prototype.forEach.call(inputs, function (input) {
