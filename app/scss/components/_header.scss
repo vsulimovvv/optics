@@ -578,3 +578,63 @@
     }
   }
 }
+.submenu {
+  transform: translateX(-30px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  width: 235px;
+  position: absolute;
+  right: -245px;
+  top: 0;
+  background-color: var(--color-white);
+  box-shadow: 0px 19px 51px 0px rgba(53, 56, 62, 0.23);
+  border-radius: 10px;
+  padding: 0 21px;
+  transition: 450ms ease;
+  transition-delay: 150ms;
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &__item {
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    color: var(--color-dark);
+    padding: 12px 0;
+    transition: 150ms ease;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 10px;
+      height: 10px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      @include maskImage(url('../images/sprite.svg#chevron'), 100%);
+      background-color: #d0d0d0;
+      transition: 150ms ease;
+    }
+
+    &:hover {
+      color: var(--color-secondary);
+
+      &::after {
+        background-color: var(--color-secondary);
+        transform: translateY(-50%) translateX(3px) rotate(-90deg);
+      }
+    }
+  }
+}
