@@ -354,126 +354,136 @@ body {
     color: #2f3133;
     padding: 10px 0;
     font-weight: 400;
-    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-    &--frames {
-      &::before {
-        @include maskImage(url('../images/content/eyeglasses.png'), contain);
-      }
+    // &--frames {
+    //   &::before {
+    //     @include maskImage(url('../images/content/eyeglasses.png'), contain);
+    //   }
 
-      padding-left: 50px;
+    //   padding-left: 50px;
 
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
-    }
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
 
-    &--glasses {
-      &::before {
-        @include maskImage(url('../images/content/summer.png'), contain);
-      }
-      padding-left: 50px;
+    // &--glasses {
+    //   &::before {
+    //     @include maskImage(url('../images/content/summer.png'), contain);
+    //   }
+    //   padding-left: 50px;
 
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
-    }
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
 
-    &--finished {
-      &::before {
-        @include maskImage(url('../images/content/finished.png'), contain);
-      }
-      padding-left: 50px;
+    // &--finished {
+    //   &::before {
+    //     @include maskImage(url('../images/content/finished.png'), contain);
+    //   }
+    //   padding-left: 50px;
 
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
-    }
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
 
-    &--sport {
-      &::before {
-        @include maskImage(url('../images/content/sports.png'), contain);
-      }
-      padding-left: 50px;
+    // &--sport {
+    //   &::before {
+    //     @include maskImage(url('../images/content/sports.png'), contain);
+    //   }
+    //   padding-left: 50px;
 
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
-    }
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
 
-    &--accessories {
-      &::before {
-        @include maskImage(url('../images/content/accessories.png'), contain);
-      }
-      padding-left: 50px;
+    // &--accessories {
+    //   &::before {
+    //     @include maskImage(url('../images/content/accessories.png'), contain);
+    //   }
+    //   padding-left: 50px;
 
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
-    }
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
   }
 
   &__link {
-    display: block;
     padding: 15px 0;
     position: relative;
     padding-right: 15px;
     transition: 200ms ease;
-    padding-left: 51px;
+
+    display: flex;
+    align-items: center;
 
     &--active {
       color: var(--color-accent);
     }
 
-    &--pl-50 {
-      padding-left: 50px;
-
-      &::before {
-        @include elDef();
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #b0acac;
-        transition: 200ms ease;
-      }
+    &-img {
+      margin-right: 20px;
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
     }
+
+    // &--pl-50 {
+    //   padding-left: 50px;
+
+    //   &::before {
+    //     @include elDef();
+    //     width: 20px;
+    //     height: 20px;
+    //     top: 50%;
+    //     left: 0;
+    //     transform: translateY(-50%);
+    //     background-color: #b0acac;
+    //     transition: 200ms ease;
+    //   }
+    // }
 
     &:hover {
       color: var(--color-accent);
@@ -485,39 +495,39 @@ body {
     }
 
     &--frames {
-      &::before {
-        @include maskImage(url('../images/content/eyeglasses.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/eyeglasses.png'), contain);
+      // }
     }
 
     &--glasses {
-      &::before {
-        @include maskImage(url('../images/content/summer.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/summer.png'), contain);
+      // }
     }
 
     &--sports {
-      &::before {
-        @include maskImage(url('../images/content/sports.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/sports.png'), contain);
+      // }
     }
 
     &--lenses {
-      &::before {
-        @include maskImage(url('../images/content/lenses.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/lenses.png'), contain);
+      // }
     }
 
     &--finished {
-      &::before {
-        @include maskImage(url('../images/content/finished.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/finished.png'), contain);
+      // }
     }
 
     &--accessories {
-      &::before {
-        @include maskImage(url('../images/content/accessories.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/accessories.png'), contain);
+      // }
     }
 
     &--stock {
@@ -525,9 +535,9 @@ body {
         display: none;
       }
 
-      &::before {
-        @include maskImage(url('../images/content/stock.png'), contain);
-      }
+      // &::before {
+      //   @include maskImage(url('../images/content/stock.png'), contain);
+      // }
     }
   }
 
