@@ -357,97 +357,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
-    // &--frames {
-    //   &::before {
-    //     @include maskImage(url('../images/content/eyeglasses.png'), contain);
-    //   }
-
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
-
-    // &--glasses {
-    //   &::before {
-    //     @include maskImage(url('../images/content/summer.png'), contain);
-    //   }
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
-
-    // &--finished {
-    //   &::before {
-    //     @include maskImage(url('../images/content/finished.png'), contain);
-    //   }
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
-
-    // &--sport {
-    //   &::before {
-    //     @include maskImage(url('../images/content/sports.png'), contain);
-    //   }
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
-
-    // &--accessories {
-    //   &::before {
-    //     @include maskImage(url('../images/content/accessories.png'), contain);
-    //   }
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
   }
 
   &__link {
@@ -470,21 +379,6 @@ body {
       object-fit: contain;
     }
 
-    // &--pl-50 {
-    //   padding-left: 50px;
-
-    //   &::before {
-    //     @include elDef();
-    //     width: 20px;
-    //     height: 20px;
-    //     top: 50%;
-    //     left: 0;
-    //     transform: translateY(-50%);
-    //     background-color: #b0acac;
-    //     transition: 200ms ease;
-    //   }
-    // }
-
     &:hover {
       color: var(--color-accent);
 
@@ -494,50 +388,10 @@ body {
       }
     }
 
-    &--frames {
-      // &::before {
-      //   @include maskImage(url('../images/content/eyeglasses.png'), contain);
-      // }
-    }
-
-    &--glasses {
-      // &::before {
-      //   @include maskImage(url('../images/content/summer.png'), contain);
-      // }
-    }
-
-    &--sports {
-      // &::before {
-      //   @include maskImage(url('../images/content/sports.png'), contain);
-      // }
-    }
-
-    &--lenses {
-      // &::before {
-      //   @include maskImage(url('../images/content/lenses.png'), contain);
-      // }
-    }
-
-    &--finished {
-      // &::before {
-      //   @include maskImage(url('../images/content/finished.png'), contain);
-      // }
-    }
-
-    &--accessories {
-      // &::before {
-      //   @include maskImage(url('../images/content/accessories.png'), contain);
-      // }
-    }
-
     &--stock {
       &::after {
         display: none;
       }
-
-      // &::before {
-      //   @include maskImage(url('../images/content/stock.png'), contain);
-      // }
     }
   }
 
@@ -1152,6 +1006,96 @@ input[type='file'] {
         font-weight: 600;
         color: #383b41;
         margin-bottom: 15px;
+      }
+    }
+  }
+
+  &--row {
+    background-color: var(--color-white);
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    align-items: center;
+    max-width: 100%;
+    gap: 30px;
+    padding: 30px;
+    transition: 300ms ease;
+    padding: 20px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 150px 1fr;
+    }
+
+    .details-box {
+      &__btn {
+        width: 30px;
+        height: 30px;
+
+        svg {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+
+    .product-card {
+      &__top {
+        margin-bottom: 0;
+        width: 150px;
+        height: 120px;
+        padding: 0;
+
+        @include breakpointsMaxW($bp-768) {
+          height: 150px;
+        }
+
+        @include breakpointsMaxW($bp-576) {
+          grid-column: 1/-1;
+          max-width: 200px;
+          width: 100%;
+          justify-self: center;
+        }
+      }
+
+      &__img {
+        @include breakpointsMaxW($bp-576) {
+          max-width: 100%;
+        }
+      }
+
+      &__info {
+        @include breakpointsMaxW($bp-576) {
+          grid-column: 1/-1;
+          width: 100%;
+          justify-self: center;
+          text-align: center;
+        }
+      }
+
+      &__spec {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        align-items: center;
+
+        @include breakpointsMaxW($bp-768) {
+          grid-column: 2/-1;
+          justify-content: flex-start;
+        }
+
+        @include breakpointsMaxW($bp-576) {
+          grid-column: 1/-1;
+          width: 100%;
+          justify-self: center;
+          max-width: 200px;
+        }
+      }
+
+      &__vendor-code {
+        display: block;
       }
     }
   }

@@ -339,12 +339,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const products = catalog.querySelectorAll('.product-card--list');
     const btnGrid = catalog.querySelector('.catalog__btn--grid');
     const btnList = catalog.querySelector('.catalog__btn--list');
+    const btnList2 = catalog.querySelector('.catalog__btn--list-2');
 
     if (catalog) {
       btnGrid.addEventListener('click', (e) => {
         products.forEach((product) => {
           if (product) {
-            product.classList.remove('product-card--list');
+            product.className = 'product-card product-card--grid';
             list.classList.add('catalog__list--grid');
           }
         });
@@ -352,8 +353,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
       btnList.addEventListener('click', (e) => {
         products.forEach((product) => {
-          product.classList.add('product-card--list');
-          list.classList.remove('catalog__list--grid');
+          if (product) {
+            product.className = 'product-card product-card--list';
+            list.classList.remove('catalog__list--grid');
+          }
+        });
+      });
+
+      btnList2.addEventListener('click', (e) => {
+        products.forEach((product) => {
+          if (product) {
+            product.className = 'product-card product-card--row';
+            list.classList.remove('catalog__list--grid');
+          }
         });
       });
     }
