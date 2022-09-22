@@ -58,6 +58,21 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // * ===== Slider
+  (function sliderBrands() {
+    const sliderEl = document.querySelectorAll('.brands__slider');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+          nextEl: document.querySelector('.brands .swiper-button-next'),
+          prevEl: document.querySelector('.brands .swiper-button-prev'),
+        },
+      });
+    });
+  })();
+
   //* Change Background Header
   function scrollHeader() {
     const nav = document.querySelector('header');
@@ -117,8 +132,8 @@ window.addEventListener('DOMContentLoaded', () => {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.slider-thumbs__nav .swiper-button-next',
+        prevEl: '.slider-thumbs__nav .swiper-button-prev',
       },
       breakpoints: {
         320: {
@@ -135,6 +150,10 @@ window.addEventListener('DOMContentLoaded', () => {
       loopedSlides: 4,
       thumbs: {
         swiper: mySwiperNav,
+      },
+      navigation: {
+        nextEl: document.querySelector('#slider-main .swiper-button-next'),
+        prevEl: document.querySelector('#slider-main .swiper-button-prev'),
       },
     });
   })();

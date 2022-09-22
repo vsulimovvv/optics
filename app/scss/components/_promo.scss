@@ -26,29 +26,43 @@
       width: 100%;
     }
   }
-
-  &__brands {
-  }
 }
 
 .brands {
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 30px 75px;
-    flex-wrap: wrap;
+  position: relative;
+  width: 67%;
 
-    @include breakpointsMaxW($bp-container) {
-      gap: 30px 50px;
-    }
+  @include breakpointsMaxW($bp-768){
+    width: 100%;
+  }
 
-    @include breakpointsMaxW($bp-768) {
-      gap: 30px 50px;
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: transparent;
+
+    &::after {
+      background-color: var(--color-white);
+      width: 80%;
+      height: 80%;
     }
   }
 
+  .swiper-button-next {
+  }
+
+  &__slider {
+    width: calc(100% - 120px);
+  }
+
+  &__list {
+    max-width: 90%;
+  }
+
   &__item {
+    box-sizing: border-box;
     min-width: 90px;
+    max-width: auto;
+    width: auto;
 
     @include adaptive-value('max-width', 170, 80, 1);
     @include adaptive-value('height', 70, 40, 1);
