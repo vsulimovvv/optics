@@ -131,10 +131,6 @@ window.addEventListener('DOMContentLoaded', () => {
       direction: 'vertical',
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-      navigation: {
-        nextEl: '.slider-thumbs__nav .swiper-button-next',
-        prevEl: '.slider-thumbs__nav .swiper-button-prev',
-      },
       breakpoints: {
         320: {
           direction: 'horizontal',
@@ -152,8 +148,12 @@ window.addEventListener('DOMContentLoaded', () => {
         swiper: mySwiperNav,
       },
       navigation: {
-        nextEl: document.querySelector('#slider-main .swiper-button-next'),
-        prevEl: document.querySelector('#slider-main .swiper-button-prev'),
+        nextEl: document.querySelector(
+          '.slider-thumbs__nav .swiper-button-next'
+        ),
+        prevEl: document.querySelector(
+          '.slider-thumbs__nav .swiper-button-prev'
+        ),
       },
     });
   })();

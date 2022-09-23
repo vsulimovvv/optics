@@ -108,12 +108,58 @@
 
     &__nav {
       width: 100%;
-      height: 500px;
+      height: 470px;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
       @include breakpointsMaxW($bp-991) {
         height: 80px;
         max-width: 100%;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute;
+        top: initial;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-accent);
+
+        @include breakpointsMaxW($bp-991) {
+          left: initial;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+
+      .swiper-button-next {
+        bottom: 20px;
+        transform: translateX(-50%) rotate(90deg);
+
+        @include breakpointsMaxW($bp-991) {
+          top: 30px;
+          right: 0;
+          left: initial;
+          transform: translateX(-50%) rotate(0);
+        }
+      }
+
+      .swiper-button-prev {
+        top: 20px;
+        transform: translateX(-50%) rotate(90deg);
+
+        @include breakpointsMaxW($bp-991) {
+          top: 30px;
+          right: 40px;
+          left: initial;
+          transform: translateX(-50%) rotate(0);
+        }
       }
     }
 
@@ -121,7 +167,8 @@
       flex-shrink: 0;
       width: 100%;
       min-width: 0;
-      height: calc(100% - 100px);
+      margin: auto 0;
+      height: calc(100% - 200px);
 
       @include breakpointsMaxW($bp-991) {
         max-width: 500px;
@@ -129,8 +176,8 @@
         width: calc(100% - 60px);
       }
 
-      @include breakpointsMaxW($bp-576) {
-        max-width: calc(280px + (500 - 280) * ((100vw - 360px) / (576 - 360)));
+      @include breakpointsMaxW($bp-768) {
+        max-width: calc(150px + (500 - 150) * ((100vw - 360px) / (768 - 360)));
       }
 
       .swiper-slide {
@@ -152,52 +199,59 @@
           width: 80px;
         }
 
+        @include breakpointsMaxW($bp-768) {
+          width: 60px;
+          height: 80%;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
         img {
           @include img(contain);
         }
       }
     }
 
-    &__nav-control {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 50px;
-      justify-content: space-between;
+    // &__nav-control {
+    //   position: absolute;
+    //   width: 30px;
+    //   height: 30px;
+    //   bottom: 30px;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   z-index: 3;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    //   height: 50px;
+    //   justify-content: space-between;
 
-      @include breakpointsMaxW($bp-991) {
-        left: initial;
-        transform: translate(0);
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+    //   @include breakpointsMaxW($bp-991) {
+    //     left: initial;
+    //     transform: translate(0);
+    //     right: 10px;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //   }
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        position: relative;
-        background-color: transparent;
-        width: 15px;
-        height: 15px;
-        right: 0;
-        left: 0;
-        margin-top: 0;
-        top: 0;
-        bottom: 0;
+    //   .swiper-button-prev,
+    //   .swiper-button-next {
+    //     position: relative;
+    //     background-color: transparent;
+    //     width: 15px;
+    //     height: 15px;
+    //     right: 0;
+    //     left: 0;
+    //     margin-top: 0;
+    //     top: 0;
+    //     bottom: 0;
 
-        &::after {
-          background-color: var(--color-dark);
-          @include maskImage(url('../images/icons/chevron.svg'), contain);
-        }
-      }
-    }
+    //     &::after {
+    //       background-color: var(--color-dark);
+    //       @include maskImage(url('../images/icons/chevron.svg'), contain);
+    //     }
+    //   }
+    // }
   }
 
   .product-spec {
